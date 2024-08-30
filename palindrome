@@ -1,0 +1,8 @@
+def is_pall(word):
+  reversed_word = word[ : :-1]
+  if word == reversed_word:
+    print("it is a palindrome")
+  else:
+    print("it is not a palindrome")
+word = input("enter the name or number")
+print(is_pall(word))
