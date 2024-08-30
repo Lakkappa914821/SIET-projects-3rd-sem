@@ -1,0 +1,11 @@
+import random
+y = int(random.randint(1,10))
+while True:
+  x = int(input("guess number from 1 to 10: "))
+  if x <y:
+    print("too low! tray again.")
+  elif x>y:
+    print("too high! tray again.")
+  else:
+    print("you guess it")
+    break
