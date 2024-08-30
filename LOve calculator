@@ -1,0 +1,11 @@
+import random
+def love_calculate():
+  print("welcome to love calculater")
+
+  name1=input("enter a first name")
+  name2=input("enter a second name")
+
+  love_score = random.randint(1,100)
+
+  print(f"the percentage of love between {name1} and {name2} is {love_score}%")
+love_calculate()
