@@ -132,3 +132,58 @@ def is_pall(word):
     print("it is not a palindrome")
 word = input("enter the name or number")
 print(is_pall(word))
+
+1. start
+2. take an input as an array
+3. consider two numbers and compare the first value with the adjucent value in the array
+4. if the elements are in the wrong order than swap them
+5. repeat untill no more swaps are needed
+6. end
+
+def bubble_sort(arr):
+  n = len(arr)
+  for i in range(n):
+    for j in range(0,n-i-1):
+      if arr[j] > arr[j+1]:
+        arr[j],arr[j+1] = arr[j+1],arr[j]
+  return arr
+print(bubble_sort([7,14,1,6,20]))
+
+# linear search: it is a straight forword algorithm that check each element in a list, one by one untill it finds the element we are a looking for
+
+def lin_search(arr,target):
+  for i in range(len(arr)):
+    if arr[i] == target:
+      return i # print(f"the element found at index number (i))
+  return -1
+numbers = [10,20,30,40,50]
+print(lin_search(numbers,40))
+
+
+def lin_search(arr,target):
+  for i in range(len(arr)):
+    if arr[i] == target:
+      return i # print(f"the element found at index words (i))
+  return -1
+words = ["gaja","lakkappa","krish"]
+print(lin_search(words,"lakkappa"))
+
+# binary search:it is more efficient algorithm than linear bxity of O(logn) unlike linear which has a complexity of O(n)
+# in binary search it reapeatedly devides the searching interval in half if the target value is less than the midpoint
+# we go to the left side if it is more than the midpoint we go to the right and find for the target value
+
+
+def bin_search(arr,target):
+  left = 0
+  right = len(arr) - 1
+  while left <= right:
+    mid = (left + right) // 2
+    if arr[mid]== target:
+      return mid
+    elif arr[mid] < target:
+      left = mid
+    else:
+      right = mid - 1
+  return -1
+numbers = [10,20,30,40,50]
+print(bin_search(numbers,40))
